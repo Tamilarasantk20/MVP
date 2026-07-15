@@ -1,16 +1,21 @@
-# shadcn/ui
+# Payment MVP
 
-A set of beautifully designed components that you can customize, extend, and build on. Start here then make it your own. Open Source. Open Code. **Use this to build your own component library**.
+A minimal checkout/payment form built with [shadcn/ui](https://ui.shadcn.com) components on Next.js.
 
-![hero](apps/v4/public/opengraph-image.png)
+This app started as a fork of the shadcn/ui component registry, trimmed down to just the pieces needed for a payment flow: `button`, `card`, `checkbox`, `form`, `input`, `label`, `radio-group`, `select`, and `separator` (`apps/v4/registry/new-york-v4/ui`). The feature itself lives in `apps/v4/components/payment/checkout-form.tsx`.
 
-## Documentation
+## Development
 
-Visit https://ui.shadcn.com/docs to view the documentation.
+```bash
+pnpm install
+pnpm dev
+```
 
-## Contributing
+The app runs at http://localhost:4000.
 
-Please read the [contributing guide](/CONTRIBUTING.md).
+## Note
+
+The checkout form validates input and simulates a payment — no live payment provider is wired up. Connect it to a real processor (e.g. Stripe) before taking this to production.
 
 ## License
 
