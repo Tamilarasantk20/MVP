@@ -93,9 +93,9 @@ const checkoutSchema = z
 type CheckoutValues = z.infer<typeof checkoutSchema>
 
 export function CheckoutForm() {
-  const [status, setStatus] = React.useState<
-    "idle" | "submitting" | "success"
-  >("idle")
+  const [status, setStatus] = React.useState<"idle" | "submitting" | "success">(
+    "idle"
+  )
 
   const form = useForm<CheckoutValues>({
     resolver: zodResolver(checkoutSchema),
